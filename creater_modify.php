@@ -150,7 +150,6 @@ var_dump($spect_data);
 
 $query_spec = "SELECT * FROM `specialty`";
 
-// $data_spec = data($query_spec);
 
 // -------------------------------------------------
 
@@ -159,8 +158,6 @@ $query_group = "
         WHERE `specialty_id` = " . $_COOKIE['specialty'] . "
     ";
 
-// if( !empty($_COOKIE['specialty']) )
-//     $data_group = data($query_group);
 
 // --------------------------------------------------
 
@@ -169,8 +166,6 @@ $query_student = "
         WHERE `group_id` = " . $_COOKIE['group'] . "
     ";
 
-// if( !empty($_COOKIE['group']) )
-//     $data_student = data($query_student);
 
 // ---------------------------------------------------
 
@@ -179,11 +174,6 @@ $query_spectator = "
         WHERE `specialty_id` = " . $_COOKIE['specialty'] . "
     ";
 
-// if( !empty($_COOKIE['specialty']) ) {
-//     $data_spectator = data($query_spectator);
-//     $data_spectator_1 = data($query_spectator);
-//     $data_spectator_2 = data($query_spectator);
-// }
 
 
 
