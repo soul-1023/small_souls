@@ -125,8 +125,6 @@ class S
     }
 }
 
-error_reporting(E_ERROR);
-
 $special   = new S('protocol', 'specialty');
 $group     = new S('protocol', 'groups');
 $student   = new S('protocol', 'students');
@@ -136,72 +134,5 @@ $special_data = $special->select()->send();
 $group_data   = $group->select()->send();
 $stud_data    = $student->select()->send();
 $spect_data   = $spectator->select()->send();
-
-
-var_dump($special_data);
-echo '<br><br>';
-var_dump($group_data);
-echo '<br><br>';
-var_dump($stud_data);
-echo '<br><br>';
-var_dump($spect_data);
-
-
-
-$query_spec = "SELECT * FROM `specialty`";
-
-
-// -------------------------------------------------
-
-$query_group = "
-        SELECT * FROM `groups` 
-        WHERE `specialty_id` = " . $_COOKIE['specialty'] . "
-    ";
-
-
-// --------------------------------------------------
-
-$query_student = "
-        SELECT * FROM `students`
-        WHERE `group_id` = " . $_COOKIE['group'] . "
-    ";
-
-
-// ---------------------------------------------------
-
-$query_spectator = "
-        SELECT * FROM `spectators`
-        WHERE `specialty_id` = " . $_COOKIE['specialty'] . "
-    ";
-
-
-
-
-
-
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ul>
-    <?
-    // for($i = 0; $i < count($rows); $i++) {
-    //     echo "<li>".
-    //         $rows[$i]['specialty_name']
-    //     ."</li>";
-    // }
-    ?>
-</ul>
